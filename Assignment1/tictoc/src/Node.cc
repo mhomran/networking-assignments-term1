@@ -29,19 +29,18 @@ void Node::initialize()
 
 void Node::handleMessage(cMessage *msg)
 {
+    static uint32_t count = 0;
     if(strcmp(getName(), "Tic") == 0)
         {
-        static uint32_t count = 1;
+
                 cMessage* msg;
 
                 string tmp = "hello" + to_string(count);
                 msg = new cMessage(tmp.c_str());
 
                 send(msg, "out");
-                count++;
         }
     else if(strcmp(getName(), "Toc") == 0) {
-        static uint32_t count = 0;
         cMessage* msg;
         if(count == 0) {
             msg = new cMessage("hi");
