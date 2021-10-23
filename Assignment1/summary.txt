@@ -1,0 +1,6 @@
+Parameters are variables that belong to a module having C data types (double, int, bool, string) and also (xml).
+In addition they can have a unit declared to the numeric types, they get their values from NED files or from omnetpp.ini, a default value can be given.
+Parameter values in NED files are considered to be a part from the model, while the changeable values over experiments can be in the .ini files.
+Expressions are welcomed to be calculate values of parameters, volatile keyword is used to re-evaluate changing expression values each time parameter is used.
+Parameter values respect hierarchy as the inner default value is considered to be its values, then relies on the nearest default value it finds.
+If a non-default value is specified for the parameter it can NOT be changed throughout any modules using NED or .ini files.
