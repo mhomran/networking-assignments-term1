@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/mesh_traffic -n .:../src $*
+# for shared lib, use: opp_run -l ../src/mesh_traffic -n .:../src $*
